@@ -1,6 +1,42 @@
 from django.shortcuts import render
-from django.core.mail import send_mail
 from django.conf import settings
+
+from brevo import Brevo
+
+
+# =========================================================
+# BREVO EMAIL HELPER
+# =========================================================
+
+def send_brevo_email(subject, email_body, reply_to=None):
+
+    client = Brevo(
+        api_key=settings.BREVO_API_KEY
+    )
+
+    send_kwargs = {
+        "subject": subject,
+        "text_content": email_body,
+        "sender": {
+            "name": settings.BREVO_SENDER_NAME,
+            "email": settings.BREVO_SENDER_EMAIL,
+        },
+        "to": [
+            {
+                "email": settings.CONTACT_EMAIL,
+                "name": "MahiMa Enterprises",
+            }
+        ],
+    }
+
+    if reply_to:
+        send_kwargs["reply_to"] = {
+            "email": reply_to,
+        }
+
+    return client.transactional_emails.send_transac_email(
+        **send_kwargs
+    )
 
 
 def home(request):
@@ -89,12 +125,10 @@ MahiMa Enterprises website.
 
         try:
 
-            send_mail(
+            send_brevo_email(
                 subject=subject,
-                message=email_body,
-                from_email=settings.DEFAULT_FROM_EMAIL,
-                recipient_list=[settings.CONTACT_EMAIL],
-                fail_silently=False,
+                email_body=email_body,
+                reply_to=email or None,
             )
 
             return render(
@@ -190,12 +224,10 @@ MahiMa Enterprises Contact Us page.
 
         try:
 
-            send_mail(
+            send_brevo_email(
                 subject=subject,
-                message=email_body,
-                from_email=settings.DEFAULT_FROM_EMAIL,
-                recipient_list=[settings.CONTACT_EMAIL],
-                fail_silently=False,
+                email_body=email_body,
+                reply_to=email or None,
             )
 
             return render(

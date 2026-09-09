@@ -228,3 +228,23 @@ CONTACT_EMAIL = os.getenv(
     'CONTACT_EMAIL',
     'mahimaenterprises1604@gmail.com'
 )
+
+
+# =========================================================
+# BREVO CONFIGURATION
+# =========================================================
+
+BREVO_API_KEY = os.getenv(
+    'BREVO_API_KEY',
+    ''
+)
+
+BREVO_SENDER_EMAIL = os.getenv(
+    'BREVO_SENDER_EMAIL',
+    'mahimaenterprises1604@gmail.com'
+)
+
+BREVO_SENDER_NAME = os.getenv(
+    'BREVO_SENDER_NAME',
+    'MahiMa Enterprises'
+)
