@@ -1,0 +1,358 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+        MahiMa Enterprises | Where Supply Meets Reliability
+        {% endblock %}
+    </title>
+
+    <meta
+        name="description"
+        content="{% block meta_description %}MahiMa Enterprises is an India-based merchant exporter and supply partner for agro products, raw agricultural products and automobile two-wheeler spare parts.{% endblock %}"
+    >
+
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="{{ request.build_absolute_uri }}">
+
+    <!-- =====================================================
+         SOCIAL MEDIA / OPEN GRAPH
+    ====================================================== -->
+
+    <meta property="og:title" content="{% block og_title %}MahiMa Enterprises | Indian Exporter & Global Supply Partner{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}MahiMa Enterprises connects international buyers with reliable Indian suppliers across agro products, raw agricultural products and automobile two-wheeler spare parts.{% endblock %}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'website/images/mahima-logo.png' }}">
+    <meta property="og:site_name" content="MahiMa Enterprises">
+
+    <!-- =====================================================
+         TWITTER / X
+    ====================================================== -->
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{% block twitter_title %}MahiMa Enterprises | Indian Exporter & Global Supply Partner{% endblock %}">
+    <meta name="twitter:description" content="{% block twitter_description %}India-based merchant exporter and global supply partner for agro products, raw agricultural products and automobile two-wheeler spare parts.{% endblock %}">
+    <meta name="twitter:image" content="{{ request.scheme }}://{{ request.get_host }}{% static 'website/images/mahima-logo.png' %}">
+
+    <!-- =====================================================
+         ADDITIONAL PAGE-SPECIFIC HEAD CONTENT
+    ====================================================== -->
+
+    {% block extra_head %}
+    {% endblock %}
+
+    <!-- =====================================================
+         COMMON CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="{% static 'website/css/style.css' %}"
+    >
+
+    <!-- =====================================================
+         PAGE-SPECIFIC CSS
+    ====================================================== -->
+
+    {% block extra_css %}
+    {% endblock %}
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="mh-navbar">
+
+    <div class="mh-navbar-container">
+
+
+        <!-- =================================================
+             LOGO - LEFT
+        ================================================== -->
+
+        <a
+            href="{% url 'home' %}"
+            class="mh-navbar-brand"
+        >
+
+            <img
+                src="{% static 'website/images/mahima-logo.png' %}"
+                alt="MahiMa Enterprises Logo"
+                class="mh-navbar-logo"
+            >
+
+        </a>
+
+
+
+        <!-- =================================================
+             CENTER NAVIGATION + COMPANY NAME
+        ================================================== -->
+
+        <div class="mh-navbar-center">
+
+
+            <!-- =================================================
+                 NAVIGATION
+            ================================================== -->
+
+            <nav class="mh-navbar-menu">
+
+                <a
+                    href="{% url 'home' %}"
+                    class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}"
+                >
+                    Home
+                </a>
+
+
+                <a
+                    href="{% url 'about' %}"
+                    class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}"
+                >
+                    About Us
+                </a>
+
+
+                <a
+                    href="{% url 'products' %}"
+                    class="{% if request.resolver_match.url_name == 'products' %}active{% endif %}"
+                >
+                    Products
+                </a>
+
+
+                <a
+                    href="{% url 'affiliation' %}"
+                    class="{% if request.resolver_match.url_name == 'affiliation' %}active{% endif %}"
+                >
+                    Affiliation
+                </a>
+
+
+                <a
+                    href="{% url 'enquiry' %}"
+                    class="{% if request.resolver_match.url_name == 'enquiry' %}active{% endif %}"
+                >
+                    Send Enquiry
+                </a>
+
+
+                <a
+                    href="{% url 'contact' %}"
+                    class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}"
+                >
+                    Contact Us
+                </a>
+
+            </nav>
+
+
+
+            <!-- =================================================
+                 COMPANY NAME - BELOW NAVIGATION
+            ================================================== -->
+
+            <div class="mh-navbar-name">
+
+                MAHIMA
+                <span>ENTERPRISES</span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             SEND ENQUIRY BUTTON - RIGHT
+        ================================================== -->
+
+        <a
+            href="{% url 'enquiry' %}"
+            class="mh-navbar-button"
+        >
+            Send Enquiry
+        </a>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main>
+
+    {% block content %}
+    {% endblock %}
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="mh-footer">
+
+    <div class="mh-footer-container">
+
+
+        <!-- =================================================
+             FOOTER BRAND
+        ================================================== -->
+
+        <div class="mh-footer-brand">
+
+            <img
+                src="{% static 'website/images/mahima-logo.png' %}"
+                alt="MahiMa Enterprises Logo"
+                class="mh-footer-logo"
+            >
+
+            <h3>
+                MahiMa Enterprises
+            </h3>
+
+            <p>
+                Where Supply Meets Reliability.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CONTACT
+        ================================================== -->
+
+        <div class="mh-footer-column">
+
+            <h4>
+                Contact
+            </h4>
+
+            <a
+                href="mailto:mahimaenterprises1604@gmail.com"
+            >
+                mahimaenterprises1604@gmail.com
+            </a>
+
+            <a
+                href="tel:+917972857123"
+            >
+                +91 7972857123
+            </a>
+
+            <p>
+                Maharashtra, India
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PRODUCTS
+        ================================================== -->
+
+        <div class="mh-footer-column">
+
+            <h4>
+                Our Products
+            </h4>
+
+            <a href="{% url 'products' %}">
+                Agro Products
+            </a>
+
+            <a href="{% url 'products' %}">
+                Raw Agro Products
+            </a>
+
+            <a href="{% url 'products' %}">
+                Automobile Spare Parts
+            </a>
+
+        </div>
+
+
+
+        <!-- =================================================
+             QUICK LINKS
+        ================================================== -->
+
+        <div class="mh-footer-column">
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="{% url 'about' %}">
+                About Us
+            </a>
+
+            <a href="{% url 'enquiry' %}">
+                Send Enquiry
+            </a>
+
+            <a href="{% url 'contact' %}">
+                Contact Us
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FOOTER BOTTOM
+    ====================================================== -->
+
+    <div class="mh-footer-bottom">
+
+        <div class="mh-footer-bottom-container">
+
+            <p>
+                © 2026 MahiMa Enterprises.
+                All Rights Reserved.
+            </p>
+
+            <p>
+                Where Supply Meets Reliability.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,533 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block title %}About MahiMa Enterprises | Indian Export & Supply Partner{% endblock %}
+
+{% block meta_description %}Learn about MahiMa Enterprises, an India-based merchant exporter and supply partner connecting international buyers with Indian suppliers for agro products and automobile two-wheeler spare parts.{% endblock %}
+{% block extra_head %}
+    <meta name="keywords" content="MahiMa Enterprises, Indian exporter, India export supplier, agro products exporter, automobile spare parts exporter, two-wheeler spare parts supplier, Indian sourcing partner">
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'website/css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- =========================================================
+     ABOUT HERO
+========================================================= -->
+<section class="about-hero">
+    <div class="about-hero-overlay">
+        <div class="about-container about-hero-content">
+
+            <p class="about-eyebrow">
+                ABOUT MAHIMA ENTERPRISES
+            </p>
+
+            <h1>
+                Your Reliable
+                <span>Supply Partner</span>
+                from India.
+            </h1>
+
+            <p class="about-hero-description">
+                Connecting international buyers with reliable Indian
+                suppliers across agro products and automobile
+                two-wheeler spare parts.
+            </p>
+
+            <div class="about-tagline">
+                <span></span>
+                Where Supply Meets Reliability.
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================================================
+     WHO WE ARE
+========================================================= -->
+<section class="about-who">
+
+    <div class="about-container about-who-grid">
+
+        <div class="about-section-number">
+            <span>01</span>
+            <div></div>
+        </div>
+
+        <div class="about-who-main">
+
+            <p class="about-eyebrow">WHO WE ARE</p>
+
+            <h2>
+                Building Reliable<br>
+                Supply Connections<br>
+                from India.
+            </h2>
+
+            <p>
+                MahiMa Enterprises is an India-based merchant exporter
+                and supplier connecting international buyers with
+                reliable Indian manufacturers and suppliers.
+            </p>
+
+            <p>
+                We focus on understanding buyer requirements and
+                coordinating suitable sourcing solutions based on
+                product specifications, quantity and destination
+                requirements.
+            </p>
+
+            <p>
+                Our business focuses on selected agro products and
+                automobile two-wheeler spare parts, offering buyers
+                a convenient supply connection from India.
+            </p>
+
+            <a href="{% url 'contact' %}" class="about-dark-button">
+                Our Story
+                <span>→</span>
+            </a>
+
+        </div>
+
+        <div class="about-approach">
+
+            <p class="about-small-label">OUR APPROACH</p>
+
+            <h3>
+                Understand.<br>
+                Source.<br>
+                Coordinate.<br>
+                Deliver.
+            </h3>
+
+            <div class="about-gold-line"></div>
+
+            <p>
+                We work around the requirements of each buyer and
+                coordinate the sourcing process with suitable
+                Indian suppliers.
+            </p>
+
+        </div>
+
+        <div class="about-map-image">
+            <img
+                src="{% static 'website/images/about/about-india-compass.png' %}"
+                alt="India and global sourcing"
+            >
+            <div class="about-map-caption">
+                <span>GLOBAL MARKETS</span>
+                <span>STRONGER TOGETHER</span>
+                <i></i>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     WHAT WE DO
+========================================================= -->
+<section class="about-what-we-do">
+
+    <div class="about-container">
+
+        <div class="about-heading-row">
+
+            <div>
+                <p class="about-eyebrow">WHAT WE DO</p>
+
+                <h2>
+                    Connecting Buyers with Indian Supply
+                </h2>
+            </div>
+
+            <p>
+                We work as a supply and export coordination partner
+                between international buyers and Indian suppliers.
+            </p>
+
+        </div>
+
+        <div class="about-service-grid">
+
+            <div class="about-service-card">
+                <div class="service-top">
+                    <span>01</span>
+                    <div class="service-icon">⌕</div>
+                </div>
+
+                <h3>Product Sourcing</h3>
+
+                <p>
+                    We identify suitable Indian sourcing options based
+                    on the buyer's product requirements and specifications.
+                </p>
+            </div>
+
+            <div class="about-service-card">
+                <div class="service-top">
+                    <span>02</span>
+                    <div class="service-icon">▤</div>
+                </div>
+
+                <h3>Buyer Requirements</h3>
+
+                <p>
+                    We understand product, quantity, packaging and
+                    destination requirements before moving forward
+                    with sourcing.
+                </p>
+            </div>
+
+            <div class="about-service-card">
+                <div class="service-top">
+                    <span>03</span>
+                    <div class="service-icon">♟</div>
+                </div>
+
+                <h3>Supply Coordination</h3>
+
+                <p>
+                    We coordinate with suitable suppliers and work
+                    toward practical supply solutions for buyers.
+                </p>
+            </div>
+
+            <div class="about-service-card">
+                <div class="service-top">
+                    <span>04</span>
+                    <div class="service-icon">▰</div>
+                </div>
+
+                <h3>Export Coordination</h3>
+
+                <p>
+                    We coordinate the requirements involved in
+                    packaging, documentation and shipment.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     BUSINESS FOCUS
+========================================================= -->
+<section class="about-business-focus">
+
+    <div class="about-container business-focus-grid">
+
+        <div class="business-focus-intro">
+
+            <p class="about-eyebrow">OUR BUSINESS FOCUS</p>
+
+            <h2>
+                Two Key<br>
+                Product Categories
+            </h2>
+
+            <p>
+                Our current supply focus covers selected agro
+                products and automobile two-wheeler spare parts.
+            </p>
+
+            <a href="{% url 'products' %}" class="about-outline-button">
+                Explore Our Products
+                <span>→</span>
+            </a>
+
+        </div>
+
+        <div class="business-category-card">
+
+            <div class="category-number">01</div>
+
+            <div class="category-image">
+                <img
+                    src="{% static 'website/images/about/about-agro.png' %}"
+                    alt="Agro products"
+                >
+            </div>
+
+            <div class="category-content">
+
+                <p class="category-label">AGRO</p>
+
+                <h3>Agro Products</h3>
+
+                <p>
+                    Selected Indian agro powders supplied according
+                    to buyer requirements.
+                </p>
+
+                <ul>
+                    <li>Banana Powder</li>
+                    <li>Moringa Powder</li>
+                    <li>Garlic Powder</li>
+                    <li>Onion Powder</li>
+                    <li>Turmeric Powder</li>
+                </ul>
+
+                <a href="{% url 'products' %}">
+                    Explore Agro Products →
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="business-category-card">
+
+            <div class="category-number">02</div>
+
+            <div class="category-image">
+                <img
+                    src="{% static 'website/images/about/about-auto-parts.png' %}"
+                    alt="Two-wheeler spare parts"
+                >
+            </div>
+
+            <div class="category-content">
+
+                <p class="category-label">AUTOMOTIVE</p>
+
+                <h3>
+                    Two-Wheeler<br>
+                    Spare Parts
+                </h3>
+
+                <p>
+                    Aftermarket two-wheeler components sourced
+                    from Indian suppliers.
+                </p>
+
+                <ul>
+                    <li>Brake Shoes</li>
+                    <li>Clutch Plates</li>
+                    <li>Gaskets</li>
+                    <li>Cables</li>
+                    <li>Filters</li>
+                </ul>
+
+                <a href="{% url 'products' %}">
+                    Explore Spare Parts →
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     OUR DIRECTION
+========================================================= -->
+<section class="about-direction">
+
+    <div class="about-container direction-grid">
+
+        <div class="direction-intro">
+
+            <p class="about-eyebrow">OUR DIRECTION</p>
+
+            <h2>
+                Built around<br>
+                reliable supply<br>
+                relationships.
+            </h2>
+
+        </div>
+
+        <div class="direction-card">
+
+            <span class="direction-number">01</span>
+
+            <div class="direction-icon">◎</div>
+
+            <div>
+
+                <p class="about-small-label">OUR MISSION</p>
+
+                <h3>
+                    Making International
+                    Sourcing Simpler
+                </h3>
+
+                <p>
+                    Our mission is to make international sourcing
+                    from India simpler, reliable and transparent
+                    by connecting buyers with suitable Indian
+                    supply options.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="direction-card">
+
+            <span class="direction-number">02</span>
+
+            <div class="direction-icon">◉</div>
+
+            <div>
+
+                <p class="about-small-label">OUR VISION</p>
+
+                <h3>
+                    Building Long-Term
+                    Supply Relationships
+                </h3>
+
+                <p>
+                    We aim to build dependable and professional
+                    supply relationships by focusing on clear
+                    communication, suitable sourcing and
+                    reliable coordination.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     WHY WORK WITH US
+========================================================= -->
+<section class="about-why">
+
+    <div class="about-container">
+
+        <div class="about-why-heading">
+
+            <p class="about-eyebrow">WHY WORK WITH US</p>
+
+            <h2>
+                A Supply Partner<br>
+                Focused on Your Requirements
+            </h2>
+
+        </div>
+
+        <div class="about-why-grid">
+
+            <div class="why-item">
+                <div class="why-icon">◯</div>
+                <span>01</span>
+                <h3>Reliable Communication</h3>
+                <p>
+                    We focus on clear communication and
+                    understanding buyer requirements before sourcing.
+                </p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon">▤</div>
+                <span>02</span>
+                <h3>Requirement-Based Sourcing</h3>
+                <p>
+                    Sourcing decisions are based on the product
+                    specifications and requirements shared by buyers.
+                </p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon">♟</div>
+                <span>03</span>
+                <h3>Indian Supplier Network</h3>
+                <p>
+                    We work with Indian manufacturers and suppliers
+                    to identify suitable sourcing possibilities.
+                </p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon">♢</div>
+                <span>04</span>
+                <h3>Professional Coordination</h3>
+                <p>
+                    We coordinate important supply and export
+                    requirements throughout the order process.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+<section class="about-final-cta">
+
+    <img
+        class="about-cta-image"
+        src="{% static 'website/images/about/about-handshake.png' %}"
+        alt="Global business partnership"
+    >
+
+    <div class="about-cta-overlay"></div>
+
+    <div class="about-container about-cta-content">
+
+        <div>
+            <p class="about-eyebrow">LET'S WORK TOGETHER</p>
+
+            <h2>
+                Looking for a Reliable<br>
+                Indian Supply Partner?
+            </h2>
+        </div>
+
+        <div class="about-cta-divider"></div>
+
+        <div class="about-cta-right">
+
+            <p>
+                Share your product requirement, quantity
+                and destination country with us.
+            </p>
+
+            <div class="about-cta-buttons">
+
+                <a href="{% url 'enquiry' %}" class="about-gold-button">
+                    Submit Requirement
+                    <span>→</span>
+                </a>
+
+                <a href="{% url 'contact' %}" class="about-outline-button">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

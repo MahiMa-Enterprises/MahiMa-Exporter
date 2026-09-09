@@ -1,0 +1,745 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block title %}Send Export Enquiry | MahiMa Enterprises{% endblock %}
+
+{% block meta_description %}Send an export enquiry to MahiMa Enterprises for Indian agro products, raw agricultural products and automobile two-wheeler spare parts. Share your quantity, packaging and destination requirements.{% endblock %}
+
+{% block extra_head %}
+    <meta name="keywords" content="export enquiry India, MahiMa Enterprises enquiry, agro products export enquiry, Indian supplier enquiry, banana powder enquiry, moringa powder supplier, two-wheeler spare parts enquiry, Indian sourcing partner">
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'website/css/enquiry.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- =========================================================
+     ENQUIRY HERO
+========================================================= -->
+
+<section class="enquiry-hero">
+
+    <div class="enquiry-hero-overlay"></div>
+
+    <div class="enquiry-container enquiry-hero-content">
+
+        <p class="enquiry-eyebrow enquiry-eyebrow-light">
+            SEND ENQUIRY
+        </p>
+
+        <h1>
+            Tell Us What<br>
+            <span>You Need.</span>
+        </h1>
+
+        <div class="enquiry-title-line"></div>
+
+        <p class="enquiry-hero-text">
+            Share your product requirement, quantity and destination
+            country with MahiMa Enterprises. Our team will review
+            your requirement and coordinate with suitable Indian
+            supply partners.
+        </p>
+
+        <div class="enquiry-hero-points">
+
+            <div class="enquiry-hero-point">
+                <span>✓</span>
+                <p>Clear Requirements</p>
+            </div>
+
+            <div class="enquiry-hero-point">
+                <span>✓</span>
+                <p>Supplier Coordination</p>
+            </div>
+
+            <div class="enquiry-hero-point">
+                <span>✓</span>
+                <p>Export Support</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ENQUIRY FORM
+========================================================= -->
+
+<section class="enquiry-section enquiry-form-section">
+
+    <div class="enquiry-container">
+
+        <div class="enquiry-section-heading">
+
+            <p class="enquiry-eyebrow">
+                YOUR REQUIREMENT
+            </p>
+
+            <h2>
+                Share Your Product Requirement
+            </h2>
+
+            <div class="enquiry-heading-line"></div>
+
+            <p>
+                Provide the details below so we can understand your
+                requirement and respond with the right information.
+            </p>
+
+        </div>
+
+
+        <div class="enquiry-form-layout">
+
+            <!-- =========================
+                 FORM
+            ========================= -->
+
+            <div class="enquiry-form-card">
+
+                {% if success_message %}
+                    <div class="form-success-message">
+                        {{ success_message }}
+                    </div>
+                {% endif %}
+
+                {% if error_message %}
+                    <div class="form-error-message">
+                        {{ error_message }}
+                    </div>
+                {% endif %}
+
+                <form method="post" action="">
+
+                    {% csrf_token %}
+
+                    <div class="form-grid">
+
+                        <!-- Full Name -->
+                        <div class="form-group">
+
+                            <label for="full_name">
+                                Full Name
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="full_name"
+                                name="full_name"
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Company Name -->
+                        <div class="form-group">
+
+                            <label for="company_name">
+                                Company Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="company_name"
+                                name="company_name"
+                                placeholder="Enter your company name"
+                            >
+
+                        </div>
+
+
+                        <!-- Business Email -->
+                        <div class="form-group">
+
+                            <label for="email">
+                                Business Email
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="name@company.com"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Phone / WhatsApp -->
+                        <div class="form-group">
+
+                            <label for="phone">
+                                Phone / WhatsApp
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder="+Country Code Number"
+                            >
+
+                        </div>
+
+
+                        <!-- Country -->
+                        <div class="form-group">
+
+                            <label for="country">
+                                Destination Country
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="country"
+                                name="country"
+                                placeholder="Enter destination country"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Product -->
+                        <div class="form-group">
+
+                            <label for="product">
+                                Product Required
+                                <span>*</span>
+                            </label>
+
+                            <select
+                                id="product"
+                                name="product"
+                                required
+                            >
+
+                                <option value="" selected disabled>
+                                    Select a product
+                                </option>
+
+                                <option value="Banana Powder">
+                                    Banana Powder
+                                </option>
+
+                                <option value="Moringa Powder">
+                                    Moringa Powder
+                                </option>
+
+                                <option value="Garlic Powder">
+                                    Garlic Powder
+                                </option>
+
+                                <option value="Onion Powder">
+                                    Onion Powder
+                                </option>
+
+                                <option value="Turmeric Powder">
+                                    Turmeric Powder
+                                </option>
+
+                                <option value="Fresh Fruits">
+                                    Fresh Fruits
+                                </option>
+
+                                <option value="Wheat / Grains">
+                                    Wheat / Grains
+                                </option>
+
+                                <option value="Automobile Spare Parts">
+                                    Automobile Spare Parts
+                                </option>
+
+                                <option value="Other">
+                                    Other Requirement
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Quantity -->
+                        <div class="form-group">
+
+                            <label for="quantity">
+                                Required Quantity
+                            </label>
+
+                            <input
+                                type="text"
+                                id="quantity"
+                                name="quantity"
+                                placeholder="e.g. 500 kg / 1 container"
+                            >
+
+                        </div>
+
+
+                        <!-- Packaging -->
+                        <div class="form-group">
+
+                            <label for="packaging">
+                                Packaging Requirement
+                            </label>
+
+                            <input
+                                type="text"
+                                id="packaging"
+                                name="packaging"
+                                placeholder="e.g. 25 kg bags"
+                            >
+
+                        </div>
+
+
+                        <!-- Message -->
+                        <div class="form-group form-group-full">
+
+                            <label for="message">
+                                Message / Product Specification
+                                <span>*</span>
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="7"
+                                placeholder="Tell us about your product specifications, quality requirements, quantity, packaging, destination or any other details..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-bottom">
+
+                        <p class="form-note">
+                            <span>i</span>
+                            Your requirement details will be used to
+                            understand and respond to your enquiry.
+                        </p>
+
+                        <button
+                            type="submit"
+                            class="enquiry-submit-button"
+                        >
+                            Submit Enquiry
+                            <span>→</span>
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- =========================
+                 SIDE INFORMATION
+            ========================= -->
+
+            <aside class="enquiry-info-card">
+
+                <p class="enquiry-card-eyebrow">
+                    WHY CONTACT US
+                </p>
+
+                <h3>
+                    Let's Discuss Your Requirement
+                </h3>
+
+                <div class="enquiry-card-line"></div>
+
+                <p class="enquiry-info-text">
+                    Whether you are looking for agro products,
+                    raw agricultural products or two-wheeler spare
+                    parts, share your requirement with us.
+                </p>
+
+
+                <div class="enquiry-info-list">
+
+                    <div class="enquiry-info-item">
+
+                        <div class="enquiry-info-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <h4>
+                                Product Requirement
+                            </h4>
+
+                            <p>
+                                Tell us the product and specifications
+                                you are looking for.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="enquiry-info-item">
+
+                        <div class="enquiry-info-icon">
+                            ◎
+                        </div>
+
+                        <div>
+                            <h4>
+                                Quantity & Packaging
+                            </h4>
+
+                            <p>
+                                Share your required quantity and
+                                preferred packaging.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="enquiry-info-item">
+
+                        <div class="enquiry-info-icon">
+                            ↔
+                        </div>
+
+                        <div>
+                            <h4>
+                                Destination
+                            </h4>
+
+                            <p>
+                                Let us know the destination country
+                                for your requirement.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="enquiry-info-footer">
+
+                    <span>
+                        MahiMa Enterprises
+                    </span>
+
+                    <p>
+                        Where Supply Meets Reliability.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     WHAT HAPPENS NEXT
+========================================================= -->
+
+<section class="enquiry-section process-section">
+
+    <div class="enquiry-container">
+
+        <div class="enquiry-section-heading">
+
+            <p class="enquiry-eyebrow">
+                WHAT HAPPENS NEXT
+            </p>
+
+            <h2>
+                From Requirement to Discussion
+            </h2>
+
+            <div class="enquiry-heading-line"></div>
+
+            <p>
+                We keep the enquiry process simple and focused on
+                understanding your requirement.
+            </p>
+
+        </div>
+
+
+        <div class="process-grid">
+
+            <!-- Step 1 -->
+            <div class="process-card">
+
+                <div class="process-number">
+                    01
+                </div>
+
+                <div class="process-icon">
+                    ✎
+                </div>
+
+                <h3>
+                    Submit Requirement
+                </h3>
+
+                <p>
+                    Share your product, quantity, packaging and
+                    destination details with us.
+                </p>
+
+            </div>
+
+
+            <!-- Step 2 -->
+            <div class="process-card">
+
+                <div class="process-number">
+                    02
+                </div>
+
+                <div class="process-icon">
+                    ◎
+                </div>
+
+                <h3>
+                    Requirement Review
+                </h3>
+
+                <p>
+                    We review your requirement and understand the
+                    specifications you need.
+                </p>
+
+            </div>
+
+
+            <!-- Step 3 -->
+            <div class="process-card">
+
+                <div class="process-number">
+                    03
+                </div>
+
+                <div class="process-icon">
+                    ↔
+                </div>
+
+                <h3>
+                    Supplier Coordination
+                </h3>
+
+                <p>
+                    We coordinate with suitable Indian manufacturers
+                    and supply partners.
+                </p>
+
+            </div>
+
+
+            <!-- Step 4 -->
+            <div class="process-card">
+
+                <div class="process-number">
+                    04
+                </div>
+
+                <div class="process-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    Quotation & Discussion
+                </h3>
+
+                <p>
+                    We discuss suitable options, pricing and the
+                    next steps for your requirement.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     DIRECT CONTACT
+========================================================= -->
+
+<section class="direct-contact-section">
+
+    <div class="enquiry-container">
+
+        <div class="direct-contact-heading">
+
+            <p class="enquiry-eyebrow">
+                PREFER DIRECT CONTACT?
+            </p>
+
+            <h2>
+                Connect With Our Team
+            </h2>
+
+        </div>
+
+
+        <div class="direct-contact-grid">
+
+            <!-- Email -->
+            <a
+                href="mailto:mahimaenterprises1604@gmail.com"
+                class="direct-contact-card"
+            >
+
+                <div class="direct-contact-icon">
+                    @
+                </div>
+
+                <div>
+
+                    <span>
+                        EMAIL
+                    </span>
+
+                    <h3>
+                        mahimaenterprises1604@gmail.com
+                    </h3>
+
+                    <p>
+                        Send us your requirement directly by email.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- WhatsApp -->
+            <a
+                href="https://wa.me/917972857123"
+                target="_blank"
+                rel="noopener"
+                class="direct-contact-card"
+            >
+
+                <div class="direct-contact-icon">
+                    ↗
+                </div>
+
+                <div>
+
+                    <span>
+                        WHATSAPP / PHONE
+                    </span>
+
+                    <h3>
+                        +91 7972857123
+                    </h3>
+
+                    <p>
+                        Connect with us for requirement discussions.
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <!-- Location -->
+            <div class="direct-contact-card">
+
+                <div class="direct-contact-icon">
+                    ◇
+                </div>
+
+                <div>
+
+                    <span>
+                        LOCATION
+                    </span>
+
+                    <h3>
+                        Maharashtra, India
+                    </h3>
+
+                    <p>
+                        Connecting international buyers with
+                        Indian supply partners.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+
+<section class="enquiry-cta">
+
+    <div class="enquiry-cta-overlay"></div>
+
+    <div class="enquiry-container enquiry-cta-inner">
+
+        <div class="enquiry-cta-copy">
+
+            <p class="enquiry-eyebrow enquiry-eyebrow-light">
+                MAHIMA ENTERPRISES
+            </p>
+
+            <h2>
+                Looking for a Reliable Supply Partner from India?
+            </h2>
+
+            <p>
+                Share your product requirement, quantity and
+                destination country with us.
+            </p>
+
+        </div>
+
+
+        <a
+            href="mailto:mahimaenterprises1604@gmail.com"
+            class="enquiry-cta-button"
+        >
+            Contact Us
+            <span>→</span>
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

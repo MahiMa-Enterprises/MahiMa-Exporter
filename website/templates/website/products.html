@@ -1,0 +1,673 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block title %}Products | Indian Agro & Two-Wheeler Spare Parts Exporter{% endblock %}
+
+{% block meta_description %}Explore MahiMa Enterprises' selected Indian agro products, raw agricultural products and automobile two-wheeler spare parts supplied according to buyer requirements.{% endblock %}
+
+{% block extra_head %}
+    <meta name="keywords" content="Indian agro products exporter, banana powder exporter, moringa powder supplier, turmeric powder exporter, raw agricultural products India, two-wheeler spare parts exporter, automobile spare parts India, Indian supplier">
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'website/css/products.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- =========================
+     PRODUCTS HERO
+========================= -->
+<section class="products-hero">
+    <div class="products-hero-overlay"></div>
+
+    <div class="products-container products-hero-content">
+        <p class="section-eyebrow light-eyebrow">OUR PRODUCTS</p>
+
+        <h1>
+            Indian Products.
+            <span>Reliable Supply.</span>
+        </h1>
+
+        <p class="products-hero-text">
+            A selected range of agro products, raw agro products and
+            automobile two-wheeler spare parts sourced from Indian
+            suppliers according to buyer requirements.
+        </p>
+
+        <div class="hero-line"></div>
+
+        <p class="hero-tagline">
+            Quality Products. Reliable Supply.
+        </p>
+    </div>
+</section>
+
+
+<!-- =========================
+     AGRO PRODUCTS
+========================= -->
+<section class="products-section agro-section" id="agro-products">
+
+    <div class="products-container">
+
+        <div class="section-heading-row">
+
+            <div>
+                <p class="section-eyebrow">AGRO PRODUCTS</p>
+
+                <h2>
+                    Natural Goodness<br>
+                    from India
+                </h2>
+
+                <p class="section-description">
+                    Selected Indian agro powders supplied according to
+                    product specifications and buyer requirements.
+                </p>
+            </div>
+
+            <a
+                href="{% static 'website/catalogues/mahima-agro-products-catalogue.pdf' %}"
+                target="_blank"
+                rel="noopener"
+                class="outline-button"
+            >
+                View Agro Catalogue
+                <span>→</span>
+            </a>
+
+        </div>
+
+
+        <!-- MAIN AGRO PRODUCT CARDS -->
+        <div class="agro-product-grid">
+
+            <!-- Banana -->
+            <article class="agro-product-card">
+                <div class="product-image-box">
+                    <img
+                        src="{% static 'website/images/products-page/01_banana-powder.png' %}"
+                        alt="Banana Powder"
+                    >
+                    <span class="product-number">01</span>
+                </div>
+
+                <div class="product-card-content">
+                    <p class="small-number">01</p>
+
+                    <h3>Banana Powder</h3>
+
+                    <p>
+                        Indian banana powder supplied according to
+                        buyer requirements.
+                    </p>
+                </div>
+            </article>
+
+
+            <!-- Moringa -->
+            <article class="agro-product-card">
+                <div class="product-image-box">
+                    <img
+                        src="{% static 'website/images/products-page/02_moringa-powder.png' %}"
+                        alt="Moringa Powder"
+                    >
+                    <span class="product-number">02</span>
+                </div>
+
+                <div class="product-card-content">
+                    <p class="small-number">02</p>
+
+                    <h3>Moringa Powder</h3>
+
+                    <p>
+                        Selected moringa powder sourced from
+                        Indian suppliers.
+                    </p>
+                </div>
+            </article>
+
+
+            <!-- Garlic -->
+            <article class="agro-product-card">
+                <div class="product-image-box">
+                    <img
+                        src="{% static 'website/images/products-page/03_garlic-powder.png' %}"
+                        alt="Garlic Powder"
+                    >
+                    <span class="product-number">03</span>
+                </div>
+
+                <div class="product-card-content">
+                    <p class="small-number">03</p>
+
+                    <h3>Garlic Powder</h3>
+
+                    <p>
+                        Garlic powder supplied based on product
+                        and quantity requirements.
+                    </p>
+                </div>
+            </article>
+
+
+            <!-- Onion -->
+            <article class="agro-product-card">
+                <div class="product-image-box">
+                    <img
+                        src="{% static 'website/images/products-page/04_onion-powder.png' %}"
+                        alt="Onion Powder"
+                    >
+                    <span class="product-number">04</span>
+                </div>
+
+                <div class="product-card-content">
+                    <p class="small-number">04</p>
+
+                    <h3>Onion Powder</h3>
+
+                    <p>
+                        Indian onion powder available according
+                        to buyer requirements.
+                    </p>
+                </div>
+            </article>
+
+
+            <!-- Turmeric -->
+            <article class="agro-product-card">
+                <div class="product-image-box">
+                    <img
+                        src="{% static 'website/images/products-page/05_turmeric-powder.png' %}"
+                        alt="Turmeric Powder"
+                    >
+                    <span class="product-number">05</span>
+                </div>
+
+                <div class="product-card-content">
+                    <p class="small-number">05</p>
+
+                    <h3>Turmeric Powder</h3>
+
+                    <p>
+                        Turmeric powder sourced from suitable
+                        Indian suppliers.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+
+        <!-- MORE AGRO OPTIONS -->
+        <div class="more-agro-panel" id="agro-catalogue">
+
+            <div class="more-agro-image">
+                <img
+                    src="{% static 'website/images/products-page/more-agro-products.png' %}"
+                    alt="More Agro Products"
+                >
+            </div>
+
+            <div class="more-agro-content">
+
+                <p class="section-eyebrow">AGRO CATALOGUE</p>
+
+                <h3>More Agro Powder Options</h3>
+
+                <p>
+                    Additional agro powder options can be sourced
+                    according to buyer requirements and availability.
+                </p>
+
+                <div class="agro-options">
+
+                    <span>Ginger Powder</span>
+                    <span>Moringa Leaf Powder</span>
+                    <span>Amla Powder</span>
+                    <span>Neem Leaf Powder</span>
+
+                    <span>Spinach Powder</span>
+                    <span>Curry Leaf Powder</span>
+                    <span>Coriander Leaf Powder</span>
+                    <span>Mint Leaf Powder</span>
+
+                    <span>Basil Powder</span>
+                    <span>Fenugreek Leaf Powder</span>
+                    <span>Wheatgrass Powder</span>
+                    <span>Ashwagandha Root Powder</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     RAW AGRO PRODUCTS
+========================= -->
+<section class="products-section raw-agro-section">
+
+    <div class="products-container">
+
+        <div class="section-heading-row">
+
+            <div>
+                <p class="section-eyebrow">RAW AGRO PRODUCTS</p>
+
+                <h2>
+                    Farm Fresh,<br>
+                    Globally Connected.
+                </h2>
+
+                <p class="section-description">
+                    Selected raw agricultural products sourced from
+                    Indian farms, available according to buyer
+                    requirements.
+                </p>
+            </div>
+
+            <div class="requirement-badge">
+                <span class="badge-icon">✦</span>
+
+                <div>
+                    <strong>AVAILABLE</strong>
+                    <small>ON REQUIREMENT</small>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="raw-agro-grid">
+
+            <!-- Fresh Fruits -->
+            <article class="raw-agro-card">
+
+                <div class="raw-image-box">
+                    <img
+                        src="{% static 'website/images/products-page/06_fresh-fruits.png' %}"
+                        alt="Fresh Fruits"
+                    >
+                </div>
+
+                <div class="raw-card-content">
+
+                    <p class="small-number">01</p>
+
+                    <h3>Fresh Fruits</h3>
+
+                    <p>
+                        Various fresh Indian fruits available
+                        according to season and buyer requirements.
+                    </p>
+
+                    <a href="{% url 'enquiry' %}">
+                        Request Availability →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Wheat & Grains -->
+            <article class="raw-agro-card">
+
+                <div class="raw-image-box">
+                    <img
+                        src="{% static 'website/images/products-page/07_wheat-grains.png' %}"
+                        alt="Wheat and Grains"
+                    >
+                </div>
+
+                <div class="raw-card-content">
+
+                    <p class="small-number">02</p>
+
+                    <h3>Wheat &amp; Grains</h3>
+
+                    <p>
+                        Selected wheat and grain products sourced
+                        from India according to requirements.
+                    </p>
+
+                    <a href="{% url 'enquiry' %}">
+                        Request Availability →
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     AUTOMOBILE SPARE PARTS
+========================= -->
+<section class="products-section automobile-section">
+
+    <div class="products-container">
+
+        <div class="section-heading-row automobile-heading">
+
+            <div>
+                <p class="section-eyebrow light-eyebrow">
+                    AUTOMOBILE TWO-WHEELER SPARE PARTS
+                </p>
+
+                <h2>
+                    Performance Parts<br>
+                    for a Moving World
+                </h2>
+
+                <p class="section-description light-description">
+                    A wide range of two-wheeler spare parts sourced
+                    from Indian manufacturers and suppliers.
+                </p>
+            </div>
+
+            <a
+                href="{% static 'website/catalogues/mahima-automobile-spare-parts-catalogue.pdf' %}"
+                target="_blank"
+                rel="noopener"
+                class="outline-button light-button"
+            >
+                View Spare Parts Catalogue
+                <span>→</span>
+            </a>
+
+        </div>
+
+
+        <!-- AUTOMOBILE CATEGORY CARDS -->
+        <div class="auto-category-grid">
+
+            <!-- Engine -->
+            <article class="auto-category-card">
+
+                <div class="auto-image-box">
+                    <img
+                        src="{% static 'website/images/products-page/09_engine-parts.png' %}"
+                        alt="Engine Parts"
+                    >
+                </div>
+
+                <div class="auto-card-content">
+                    <p class="small-number">01</p>
+
+                    <h3>Engine Parts</h3>
+
+                    <p>
+                        Components for engine-related
+                        requirements.
+                    </p>
+
+                    <a href="#spare-parts-catalogue">
+                        View Category →
+                    </a>
+                </div>
+
+            </article>
+
+
+            <!-- Brake -->
+            <article class="auto-category-card">
+
+                <div class="auto-image-box">
+                    <img
+                        src="{% static 'website/images/products-page/10_brake-control-parts.png' %}"
+                        alt="Brake and Control Parts"
+                    >
+                </div>
+
+                <div class="auto-card-content">
+                    <p class="small-number">02</p>
+
+                    <h3>Brake &amp; Control Parts</h3>
+
+                    <p>
+                        Brake and control components
+                        for two-wheelers.
+                    </p>
+
+                    <a href="#spare-parts-catalogue">
+                        View Category →
+                    </a>
+                </div>
+
+            </article>
+
+
+            <!-- Clutch -->
+            <article class="auto-category-card">
+
+                <div class="auto-image-box">
+                    <img
+                        src="{% static 'website/images/products-page/10_clutch-parts.png' %}"
+                        alt="Clutch Parts"
+                    >
+                </div>
+
+                <div class="auto-card-content">
+                    <p class="small-number">03</p>
+
+                    <h3>Clutch Parts</h3>
+
+                    <p>
+                        Clutch components sourced from
+                        Indian suppliers.
+                    </p>
+
+                    <a href="#spare-parts-catalogue">
+                        View Category →
+                    </a>
+                </div>
+
+            </article>
+
+
+            <!-- Electrical -->
+            <article class="auto-category-card">
+
+                <div class="auto-image-box">
+                    <img
+                        src="{% static 'website/images/products-page/11_electrical-parts.png' %}"
+                        alt="Electrical Parts"
+                    >
+                </div>
+
+                <div class="auto-card-content">
+                    <p class="small-number">04</p>
+
+                    <h3>Electrical Parts</h3>
+
+                    <p>
+                        Electrical components for
+                        two-wheeler applications.
+                    </p>
+
+                    <a href="#spare-parts-catalogue">
+                        View Category →
+                    </a>
+                </div>
+
+            </article>
+
+
+            <!-- Drive -->
+            <article class="auto-category-card">
+
+                <div class="auto-image-box">
+                    <img
+                        src="{% static 'website/images/products-page/12_drive-transmission-parts.png' %}"
+                        alt="Drive and Transmission Parts"
+                    >
+                </div>
+
+                <div class="auto-card-content">
+                    <p class="small-number">05</p>
+
+                    <h3>Drive &amp; Transmission Parts</h3>
+
+                    <p>
+                        Drive, chain and transmission-related
+                        components.
+                    </p>
+
+                    <a href="#spare-parts-catalogue">
+                        View Category →
+                    </a>
+                </div>
+
+            </article>
+
+
+            <!-- Other -->
+            <article class="auto-category-card">
+
+                <div class="auto-image-box">
+                    <img
+                        src="{% static 'website/images/products-page/13_other-parts.png' %}"
+                        alt="Other Engine Parts"
+                    >
+                </div>
+
+                <div class="auto-card-content">
+                    <p class="small-number">06</p>
+
+                    <h3>Other Engine Parts</h3>
+
+                    <p>
+                        Additional engine and related
+                        spare-part options.
+                    </p>
+
+                    <a href="#spare-parts-catalogue">
+                        View Category →
+                    </a>
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- AVAILABLE PRODUCT OPTIONS -->
+        <div class="spare-parts-panel" id="spare-parts-catalogue">
+
+            <div class="spare-parts-image">
+
+                <img
+                    src="{% static 'website/images/products-page/08_available-product-options.png' %}"
+                    alt="Available Product Options"
+                >
+
+            </div>
+
+            <div class="spare-parts-content">
+
+                <p class="section-eyebrow light-eyebrow">
+                    SELECTED SPARE PARTS
+                </p>
+
+                <h3>Available Product Options</h3>
+
+                <div class="spare-parts-list">
+
+                    <span>Gaskets</span>
+                    <span>Cylinder Block</span>
+                    <span>Piston Kit</span>
+                    <span>Valve</span>
+                    <span>Camshaft</span>
+                    <span>Rocker Arm</span>
+                    <span>Engine Bearings</span>
+                    <span>Oil Seal</span>
+
+                    <span>Brake Shoes</span>
+                    <span>Brake Cable</span>
+                    <span>Clutch Cable</span>
+                    <span>Brake Lever</span>
+                    <span>Clutch Lever</span>
+                    <span>Accelerator Cable</span>
+
+                    <span>Clutch Disc</span>
+                    <span>Pressure Plate</span>
+                    <span>Clutch Cover</span>
+                    <span>Clutch Release Bearing</span>
+
+                    <span>Head Lamp</span>
+                    <span>Indicator</span>
+                    <span>Tail Lamp</span>
+                    <span>Horn</span>
+                    <span>Spark Plug</span>
+                    <span>CDI Unit</span>
+
+                    <span>Voltage Regulator</span>
+                    <span>Wiring Harness</span>
+                    <span>Drive Chain</span>
+                    <span>Sprocket</span>
+                    <span>Timing Chain</span>
+                    <span>Carburetor</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL CTA
+========================= -->
+<section class="products-cta">
+
+    <div class="products-container products-cta-inner">
+
+        <div>
+            <p class="section-eyebrow">LET'S WORK TOGETHER</p>
+
+            <h2>
+                Looking for a<br>
+                Specific Product?
+            </h2>
+
+            <p>
+                Share your product requirement, quantity and
+                destination country with us.
+            </p>
+
+            <div class="cta-buttons">
+
+                <a href="{% url 'enquiry' %}" class="primary-button">
+                    Submit Requirement
+                    <span>→</span>
+                </a>
+
+                <a href="{% url 'contact' %}" class="secondary-button">
+                    Contact Us
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

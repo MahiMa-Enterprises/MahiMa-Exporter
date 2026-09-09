@@ -1,0 +1,957 @@
+/* =========================================================
+   MAHIMA ENTERPRISES
+   COMMON / BASE STYLES
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #14213d;
+    line-height: 1.6;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* =========================================================
+   COMMON CONTAINER
+========================================================= */
+
+.mh-container {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.mh-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e8e8e8;
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+
+.mh-navbar-container {
+    width: min(1380px, calc(100% - 50px));
+
+    min-height: 125px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 35px;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   NAVBAR BRAND
+========================================================= */
+
+.mh-navbar-brand {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+
+.mh-navbar-logo {
+    width: 135px;
+    height: 85px;
+
+    object-fit: contain;
+
+    margin-bottom: 4px;
+}
+
+
+/* =========================================================
+   CENTER NAVIGATION + COMPANY NAME
+========================================================= */
+
+.mh-navbar-center {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: max-content;
+
+    z-index: 5;
+}
+
+
+/* =========================================================
+   NAVIGATION MENU
+========================================================= */
+
+.mh-navbar-menu {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 28px;
+
+    width: max-content;
+
+    flex: none;
+}
+
+
+.mh-navbar-menu a {
+    position: relative;
+
+    color: #14213d;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    padding: 10px 0;
+
+    transition:
+        color 0.25s ease;
+}
+
+
+.mh-navbar-menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 2px;
+
+    width: 0;
+    height: 2px;
+
+    background: #c9a227;
+
+    transition: width 0.25s ease;
+}
+
+
+.mh-navbar-menu a:hover {
+    color: #c9a227;
+}
+
+
+.mh-navbar-menu a:hover::after {
+    width: 100%;
+}
+
+
+.mh-navbar-menu a.active {
+    color: #c9a227;
+}
+
+
+.mh-navbar-menu a.active::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   COMPANY NAME
+   BELOW NAVIGATION
+========================================================= */
+
+.mh-navbar-center .mh-navbar-name {
+    margin-top: 8px;
+
+    color: #14213d;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: 2px;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+.mh-navbar-center .mh-navbar-name span {
+    color: #14213d;
+
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   NAVBAR CTA
+========================================================= */
+
+.mh-navbar-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 12px 20px;
+
+    background: #14213d;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    border: 1px solid #14213d;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.mh-navbar-button:hover {
+    background: #c9a227;
+
+    border-color: #c9a227;
+
+    color: #14213d;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+main {
+    width: 100%;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.mh-footer {
+    background: #111827;
+
+    color: #ffffff;
+
+    margin-top: 0;
+}
+
+
+.mh-footer-container {
+    width: min(1180px, calc(100% - 40px));
+
+    margin: 0 auto;
+
+    padding: 70px 0 60px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.4fr
+        1fr
+        1fr
+        1fr;
+
+    gap: 50px;
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+========================================================= */
+
+.mh-footer-brand {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.mh-footer-logo {
+    width: 150px;
+    height: 110px;
+
+    object-fit: contain;
+
+    margin-bottom: 12px;
+}
+
+
+.mh-footer-brand h3 {
+    font-size: 20px;
+
+    font-weight: 800;
+
+    margin-bottom: 6px;
+}
+
+
+.mh-footer-brand p {
+    color: #cbd5e1;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   FOOTER COLUMNS
+========================================================= */
+
+.mh-footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.mh-footer-column h4 {
+    position: relative;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 9px;
+}
+
+
+.mh-footer-column h4::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 32px;
+    height: 2px;
+
+    background: #c9a227;
+}
+
+
+.mh-footer-column a,
+.mh-footer-column p {
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    margin-bottom: 8px;
+
+    transition:
+        color 0.25s ease;
+}
+
+
+.mh-footer-column a:hover {
+    color: #c9a227;
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.mh-footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.mh-footer-bottom-container {
+    width: min(1180px, calc(100% - 40px));
+
+    min-height: 70px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.mh-footer-bottom p {
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   COMMON BUTTON
+========================================================= */
+
+.mh-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 13px 22px;
+
+    background: #14213d;
+
+    color: #ffffff;
+
+    border: 1px solid #14213d;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.mh-button:hover {
+    background: #c9a227;
+
+    border-color: #c9a227;
+
+    color: #14213d;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .mh-navbar-container {
+        gap: 20px;
+    }
+
+
+    .mh-navbar-menu {
+        gap: 18px;
+    }
+
+
+    .mh-navbar-menu a {
+        font-size: 14px;
+    }
+
+
+    .mh-navbar-button {
+        padding: 11px 16px;
+
+        font-size: 13px;
+    }
+
+
+    .mh-footer-container {
+        grid-template-columns:
+            1.3fr
+            1fr
+            1fr;
+
+        gap: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .mh-navbar-container {
+        min-height: 125px;
+
+        padding: 12px 0;
+    }
+
+
+    .mh-navbar-brand {
+        align-self: flex-start;
+
+        margin-top: 8px;
+    }
+
+
+    .mh-navbar-menu {
+        gap: 16px;
+    }
+
+
+    .mh-navbar-menu a {
+        font-size: 13px;
+
+        padding: 7px 0;
+    }
+
+
+    .mh-navbar-button {
+        margin-left: auto;
+
+        align-self: flex-start;
+
+        margin-top: 8px;
+    }
+
+
+    .mh-navbar-center {
+        top: 50%;
+    }
+
+
+    .mh-navbar-center .mh-navbar-name {
+        font-size: 18px;
+    }
+
+
+    .mh-footer-container {
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 40px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .mh-container {
+        width: min(100% - 28px, 1180px);
+    }
+
+
+    /* ---------- NAVBAR ---------- */
+
+    .mh-navbar-container {
+        width: calc(100% - 28px);
+
+        min-height: 150px;
+
+        padding: 10px 0 15px;
+
+        gap: 10px;
+    }
+
+
+    .mh-navbar-brand {
+        margin-top: 0;
+
+        align-self: flex-start;
+    }
+
+
+    .mh-navbar-logo {
+        width: 100px;
+        height: 65px;
+    }
+
+
+    /* ---------- CENTER GROUP ---------- */
+
+    .mh-navbar-center {
+        position: absolute;
+
+        left: 50%;
+
+        top: 12px;
+
+        transform: translateX(-50%);
+
+        width: calc(100% - 130px);
+
+        max-width: 430px;
+    }
+
+
+    /* ---------- NAVIGATION ---------- */
+
+    .mh-navbar-center .mh-navbar-menu {
+        width: 100%;
+
+        gap: 16px;
+
+        justify-content: center;
+
+        overflow-x: auto;
+
+        padding-bottom: 4px;
+
+        scrollbar-width: none;
+    }
+
+
+    .mh-navbar-center .mh-navbar-menu::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .mh-navbar-center .mh-navbar-menu a {
+        font-size: 12px;
+
+        padding: 6px 0;
+
+        white-space: nowrap;
+    }
+
+
+    /* ---------- COMPANY NAME ---------- */
+
+    .mh-navbar-center .mh-navbar-name {
+        margin-top: 5px;
+
+        font-size: 15px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    /* ---------- RIGHT BUTTON ---------- */
+
+    .mh-navbar-button {
+        padding: 10px 13px;
+
+        font-size: 12px;
+
+        margin-left: auto;
+
+        margin-top: 0;
+
+        align-self: flex-start;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .mh-footer-container {
+        width: calc(100% - 28px);
+
+        padding: 50px 0 40px;
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .mh-footer-brand {
+        align-items: center;
+
+        text-align: center;
+    }
+
+
+    .mh-footer-logo {
+        width: 130px;
+        height: 95px;
+    }
+
+
+    .mh-footer-column {
+        align-items: center;
+
+        text-align: center;
+    }
+
+
+    .mh-footer-column h4::after {
+        left: 50%;
+
+        transform: translateX(-50%);
+    }
+
+
+    .mh-footer-bottom-container {
+        width: calc(100% - 28px);
+
+        min-height: auto;
+
+        padding: 20px 0;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 6px;
+    }
+
+
+    .mh-footer-bottom p {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .mh-navbar-container {
+        min-height: 155px;
+    }
+
+
+    .mh-navbar-logo {
+        width: 85px;
+        height: 58px;
+    }
+
+
+    .mh-navbar-center {
+        width: calc(100% - 110px);
+    }
+
+
+    .mh-navbar-center .mh-navbar-menu {
+        gap: 12px;
+    }
+
+
+    .mh-navbar-center .mh-navbar-menu a {
+        font-size: 11px;
+    }
+
+
+    .mh-navbar-center .mh-navbar-name {
+        font-size: 14px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .mh-navbar-button {
+        padding: 9px 10px;
+
+        font-size: 11px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE NAVBAR FIX
+   Keeps the existing desktop/tablet design unchanged.
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .mh-navbar-container {
+        width: calc(100% - 24px);
+        min-height: 145px;
+        padding: 10px 0 12px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    .mh-navbar-brand {
+        position: relative;
+        z-index: 10;
+        flex-shrink: 0;
+    }
+
+    .mh-navbar-logo {
+        width: 92px;
+        height: 62px;
+    }
+
+    /* Put the navigation on its own full-width row */
+    .mh-navbar-center {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 72px;
+        transform: none;
+        width: 100%;
+        max-width: none;
+        z-index: 5;
+    }
+
+    .mh-navbar-center .mh-navbar-menu {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        gap: 18px;
+        padding: 0 8px 5px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .mh-navbar-center .mh-navbar-menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    .mh-navbar-center .mh-navbar-menu a {
+        flex: 0 0 auto;
+        font-size: 12px;
+        padding: 5px 0;
+        white-space: nowrap;
+    }
+
+    .mh-navbar-center .mh-navbar-name {
+        margin-top: 5px;
+        font-size: 15px;
+        letter-spacing: 1.5px;
+        text-align: center;
+    }
+
+    .mh-navbar-button {
+        position: relative;
+        z-index: 10;
+        flex-shrink: 0;
+        margin: 0;
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE NAVBAR
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .mh-navbar-container {
+        width: calc(100% - 20px);
+        min-height: 142px;
+    }
+
+    .mh-navbar-logo {
+        width: 82px;
+        height: 56px;
+    }
+
+    .mh-navbar-center {
+        top: 68px;
+    }
+
+    .mh-navbar-center .mh-navbar-menu {
+        gap: 15px;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    .mh-navbar-center .mh-navbar-menu a {
+        font-size: 11px;
+    }
+
+    .mh-navbar-center .mh-navbar-name {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .mh-navbar-button {
+        padding: 9px 10px;
+        font-size: 11px;
+    }
+}

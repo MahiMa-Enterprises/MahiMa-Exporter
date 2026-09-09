@@ -1,0 +1,800 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block title %}
+MahiMa Enterprises | Indian Exporter & Global Supply Partner
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'website/css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <!-- =========================================================
+         SEO STRUCTURED DATA
+    ========================================================== -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "MahiMa Enterprises",
+        "description": "India-based merchant exporter and supply partner for agro products, raw agricultural products and automobile two-wheeler spare parts.",
+        "email": "mahimaenterprises1604@gmail.com",
+        "telephone": "+91 7972857123",
+        "url": "{{ request.build_absolute_uri }}"
+    }
+    </script>
+
+
+
+<div class="mh-home-page">
+
+    <!-- =========================================================
+         HERO SECTION
+    ========================================================== -->
+
+    <section class="mh-home-hero">
+
+        <div class="mh-home-hero-bg"></div>
+
+        <div class="mh-home-container">
+
+            <div class="mh-home-hero-content">
+
+                <p class="mh-home-eyebrow">
+                    GLOBAL SUPPLY PARTNER FROM INDIA
+                </p>
+
+                <h1>
+                    Reliable Indian Products
+                    <span>for a Better Tomorrow</span>
+                </h1>
+
+                <p class="mh-home-hero-description">
+                    MahiMa Enterprises connects international buyers
+                    with reliable Indian suppliers across agro products,
+                    raw agricultural products and automobile two-wheeler
+                    spare parts.
+                </p>
+
+                <div class="mh-home-hero-actions">
+
+                    <a href="{% url 'products' %}"
+                       class="mh-home-button mh-home-button-gold">
+                        Explore Products
+                        <span>→</span>
+                    </a>
+
+                    <a href="{% url 'enquiry' %}"
+                       class="mh-home-button mh-home-button-outline">
+                        Send Enquiry
+                    </a>
+
+                </div>
+
+                <!-- HERO BENEFITS -->
+
+                <div class="mh-home-hero-benefits">
+
+                    <div class="mh-home-benefit">
+                        <div class="mh-home-benefit-icon">✓</div>
+
+                        <div>
+                            <strong>Quality</strong>
+                            <small>Sourced Products</small>
+                        </div>
+                    </div>
+
+                    <div class="mh-home-benefit">
+                        <div class="mh-home-benefit-icon">◎</div>
+
+                        <div>
+                            <strong>Global</strong>
+                            <small>Market Reach</small>
+                        </div>
+                    </div>
+
+                    <div class="mh-home-benefit">
+                        <div class="mh-home-benefit-icon">◇</div>
+
+                        <div>
+                            <strong>Reliable</strong>
+                            <small>Partnerships</small>
+                        </div>
+                    </div>
+
+                    <div class="mh-home-benefit">
+                        <div class="mh-home-benefit-icon">→</div>
+
+                        <div>
+                            <strong>On-Time</strong>
+                            <small>Delivery</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="mh-home-hero-side">
+
+                <div class="mh-home-hero-side-title">
+                    INDIA<br>
+                    TO THE<br>
+                    WORLD
+                </div>
+
+                <div class="mh-home-gold-line"></div>
+
+                <p>
+                    Indian Products<br>
+                    Global Opportunities
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         PRODUCT CATEGORIES
+    ========================================================== -->
+
+    <section class="mh-home-categories">
+
+        <div class="mh-home-container">
+
+            <div class="mh-home-section-heading">
+
+                <div>
+
+                    <p class="mh-home-eyebrow mh-home-dark-eyebrow">
+                        OUR PRODUCT CATEGORIES
+                    </p>
+
+                    <h2>
+                        Supplying Quality Products
+                        <span>Across Key Categories</span>
+                    </h2>
+
+                    <p>
+                        We focus on selected products and continuously
+                        expand our product range to serve global buyers.
+                    </p>
+
+                </div>
+
+                <a href="{% url 'products' %}"
+                   class="mh-home-text-link">
+                    View All Products
+                    <span>→</span>
+                </a>
+
+            </div>
+
+
+            <div class="mh-home-category-grid">
+
+                <!-- AGRO POWDER -->
+
+                <article class="mh-home-category-card">
+
+                    <div class="mh-home-category-visual">
+
+                        <img
+                            src="{% static 'website/images/categories/agro-powder.png' %}"
+                            alt="Agro Powder Products"
+                        >
+
+                    </div>
+
+                    <div class="mh-home-category-content">
+
+                        <div class="mh-home-category-icon">
+                            ◈
+                        </div>
+
+                        <h3>
+                            Agro Powder<br>
+                            Products
+                        </h3>
+
+                        <p>
+                            Natural and processed powders with high
+                            nutritional and commercial value.
+                        </p>
+
+                        <ul>
+                            <li>Banana Powder</li>
+                            <li>Moringa Powder</li>
+                            <li>Garlic Powder</li>
+                            <li>Onion Powder</li>
+                            <li>Turmeric Powder</li>
+                        </ul>
+
+                        <a href="{% url 'products' %}">
+                            View Products
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- RAW AGRO -->
+
+                <article class="mh-home-category-card">
+
+                    <div class="mh-home-category-visual">
+
+                        <img
+                            src="{% static 'website/images/categories/raw-agro.png' %}"
+                            alt="Raw Agro Products"
+                        >
+
+                    </div>
+
+                    <div class="mh-home-category-content">
+
+                        <div class="mh-home-category-icon">
+                            ◇
+                        </div>
+
+                        <h3>
+                            Raw Agro<br>
+                            Products
+                        </h3>
+
+                        <p>
+                            Raw agricultural products sourced according
+                            to buyer requirements.
+                        </p>
+
+                        <ul>
+                            <li>Fresh Fruits</li>
+                            <li>Grains & Cereals</li>
+                            <li>Spices & Seeds</li>
+                            <li>Pulses & Legumes</li>
+                            <li>And More...</li>
+                        </ul>
+
+                        <a href="{% url 'products' %}">
+                            View Products
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- AUTOMOBILE -->
+
+                <article class="mh-home-category-card">
+
+                    <div class="mh-home-category-visual">
+
+                        <img
+                            src="{% static 'website/images/categories/automobile-spare-parts.png' %}"
+                            alt="Automobile Two-Wheeler Spare Parts"
+                        >
+
+                    </div>
+
+                    <div class="mh-home-category-content">
+
+                        <div class="mh-home-category-icon">
+                            ⚙
+                        </div>
+
+                        <h3>
+                            Automobile Two-Wheeler<br>
+                            Spare Parts
+                        </h3>
+
+                        <p>
+                            Aftermarket components sourced from
+                            Indian suppliers.
+                        </p>
+
+                        <ul>
+                            <li>Brake Shoes</li>
+                            <li>Clutch Plates</li>
+                            <li>Gaskets</li>
+                            <li>Cables</li>
+                            <li>Filters</li>
+                        </ul>
+
+                        <a href="{% url 'products' %}">
+                            View Products
+                            <span>→</span>
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         WHY CHOOSE MAHIMA
+    ========================================================== -->
+
+    <section class="mh-home-why">
+
+        <div class="mh-home-container">
+
+            <div class="mh-home-why-grid">
+
+                <div class="mh-home-why-heading">
+
+                    <p class="mh-home-eyebrow mh-home-dark-eyebrow">
+                        WHY CHOOSE MAHIMA ENTERPRISES
+                    </p>
+
+                    <h2>
+                        Your Trusted Export<br>
+                        Partner from India
+                    </h2>
+
+                </div>
+
+
+                <div class="mh-home-why-item">
+
+                    <div class="mh-home-why-icon">
+                        ✓
+                    </div>
+
+                    <h3>
+                        Wide Product<br>
+                        Range
+                    </h3>
+
+                    <p>
+                        Selected products across key categories.
+                    </p>
+
+                </div>
+
+
+                <div class="mh-home-why-item">
+
+                    <div class="mh-home-why-icon">
+                        ◇
+                    </div>
+
+                    <h3>
+                        Quality<br>
+                        Focus
+                    </h3>
+
+                    <p>
+                        Product requirements and specifications are
+                        considered during sourcing.
+                    </p>
+
+                </div>
+
+
+                <div class="mh-home-why-item">
+
+                    <div class="mh-home-why-icon">
+                        ◎
+                    </div>
+
+                    <h3>
+                        Competitive<br>
+                        Pricing
+                    </h3>
+
+                    <p>
+                        Requirement-based sourcing and coordination.
+                    </p>
+
+                </div>
+
+
+                <div class="mh-home-why-item">
+
+                    <div class="mh-home-why-icon">
+                        ◈
+                    </div>
+
+                    <h3>
+                        Global<br>
+                        Reach
+                    </h3>
+
+                    <p>
+                        Connecting Indian suppliers with international buyers.
+                    </p>
+
+                </div>
+
+
+                <div class="mh-home-why-item">
+
+                    <div class="mh-home-why-icon">
+                        ○
+                    </div>
+
+                    <h3>
+                        Customer<br>
+                        Support
+                    </h3>
+
+                    <p>
+                        Clear communication throughout the process.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         FEATURED PRODUCTS
+    ========================================================== -->
+
+    <section class="mh-home-featured">
+
+        <div class="mh-home-container">
+
+            <div class="mh-home-featured-heading">
+
+                <div>
+
+                    <p class="mh-home-eyebrow mh-home-dark-eyebrow">
+                        FEATURED PRODUCTS
+                    </p>
+
+                    <h2>
+                        A Glimpse of Our<br>
+                        <span>Product Range</span>
+                    </h2>
+
+                    <p>
+                        Explore some of our selected products.
+                        More products will be added to our catalog.
+                    </p>
+
+                </div>
+
+                <a href="{% url 'products' %}"
+                   class="mh-home-text-link">
+                    View All Products
+                    <span>→</span>
+                </a>
+
+            </div>
+
+
+            <div class="mh-home-featured-grid">
+
+
+                <!-- 01 BANANA -->
+
+                <article class="mh-home-product-card">
+
+                    <div class="mh-home-product-image">
+
+                        <img
+                            src="{% static 'website/images/products/01_banana-powder.png' %}"
+                            alt="Banana Powder"
+                        >
+
+                        <span>01</span>
+
+                    </div>
+
+                    <div class="mh-home-product-info">
+
+                        <h3>
+                            Banana Powder
+                        </h3>
+
+                        <small>
+                            Agro Powder
+                        </small>
+
+                        <a href="{% url 'products' %}">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 02 MORINGA -->
+
+                <article class="mh-home-product-card">
+
+                    <div class="mh-home-product-image">
+
+                        <img
+                            src="{% static 'website/images/products/02_moringa-powder.png' %}"
+                            alt="Moringa Powder"
+                        >
+
+                        <span>02</span>
+
+                    </div>
+
+                    <div class="mh-home-product-info">
+
+                        <h3>
+                            Moringa Powder
+                        </h3>
+
+                        <small>
+                            Agro Powder
+                        </small>
+
+                        <a href="{% url 'products' %}">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 03 TURMERIC -->
+
+                <article class="mh-home-product-card">
+
+                    <div class="mh-home-product-image">
+
+                        <img
+                            src="{% static 'website/images/products/03_turmeric-powder.png' %}"
+                            alt="Turmeric Powder"
+                        >
+
+                        <span>03</span>
+
+                    </div>
+
+                    <div class="mh-home-product-info">
+
+                        <h3>
+                            Turmeric Powder
+                        </h3>
+
+                        <small>
+                            Agro Powder
+                        </small>
+
+                        <a href="{% url 'products' %}">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 04 MANGO -->
+
+                <article class="mh-home-product-card">
+
+                    <div class="mh-home-product-image">
+
+                        <img
+                            src="{% static 'website/images/products/04_fresh-mangoes.png' %}"
+                            alt="Fresh Mangoes"
+                        >
+
+                        <span>04</span>
+
+                    </div>
+
+                    <div class="mh-home-product-info">
+
+                        <h3>
+                            Fresh Mangoes
+                        </h3>
+
+                        <small>
+                            Raw Agro Product
+                        </small>
+
+                        <a href="{% url 'products' %}">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 05 WHEAT -->
+
+                <article class="mh-home-product-card">
+
+                    <div class="mh-home-product-image">
+
+                        <img
+                            src="{% static 'website/images/products/05_wheat-grains.png' %}"
+                            alt="Wheat Grains"
+                        >
+
+                        <span>05</span>
+
+                    </div>
+
+                    <div class="mh-home-product-info">
+
+                        <h3>
+                            Wheat Grains
+                        </h3>
+
+                        <small>
+                            Raw Agro Product
+                        </small>
+
+                        <a href="{% url 'products' %}">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- 06 BRAKE SHOES -->
+
+                <article class="mh-home-product-card">
+
+                    <div class="mh-home-product-image">
+
+                        <img
+                            src="{% static 'website/images/products/06_brake-shoes.png' %}"
+                            alt="Brake Shoes"
+                        >
+
+                        <span>06</span>
+
+                    </div>
+
+                    <div class="mh-home-product-info">
+
+                        <h3>
+                            Brake Shoes
+                        </h3>
+
+                        <small>
+                            Two-Wheeler Parts
+                        </small>
+
+                        <a href="{% url 'products' %}">
+                            View Details →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         MORE PRODUCTS COMING SOON
+         WORLD MAP = FULL SECTION BACKGROUND
+    ========================================================== -->
+
+    <section class="mh-home-more-products">
+
+        <div class="mh-home-more-background">
+
+            <div class="mh-home-container">
+
+                <div class="mh-home-more-content">
+
+                    <p class="mh-home-eyebrow">
+                        EXPANDING OUR RANGE
+                    </p>
+
+                    <h2>
+                        More Products<br>
+                        Coming Soon...
+                    </h2>
+
+                    <p>
+                        We are continuously adding new products
+                        across different categories to serve your
+                        growing requirements.
+                    </p>
+
+                    <a href="{% url 'enquiry' %}"
+                       class="mh-home-button mh-home-button-gold">
+                        Request a Product
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         FINAL CTA
+    ========================================================== -->
+
+    <section class="mh-home-final-cta">
+
+        <div class="mh-home-container">
+
+            <div class="mh-home-final-grid">
+
+                <div>
+
+                    <p class="mh-home-eyebrow">
+                        LET'S WORK TOGETHER
+                    </p>
+
+                    <h2>
+                        Looking for a Reliable
+                        Supply Partner from India?
+                    </h2>
+
+                </div>
+
+
+                <div>
+
+                    <p class="mh-home-final-text">
+                        Share your product requirement, quantity
+                        and destination country with us.
+                    </p>
+
+                </div>
+
+
+                <div class="mh-home-final-actions">
+
+                    <a href="{% url 'enquiry' %}"
+                       class="mh-home-button mh-home-button-gold">
+                        Submit Enquiry
+                        <span>→</span>
+                    </a>
+
+                    <a href="{% url 'contact' %}"
+                       class="mh-home-button mh-home-button-outline">
+                        Contact Us
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+{% endblock %}

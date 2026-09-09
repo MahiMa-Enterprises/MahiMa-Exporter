@@ -1,0 +1,931 @@
+/* =========================================================
+   MAHIMA ENTERPRISES
+   PRODUCTS PAGE
+========================================================= */
+
+:root {
+    --products-navy: #172331;
+    --products-navy-dark: #101a25;
+    --products-cream: #f5f2eb;
+    --products-white: #ffffff;
+    --products-text: #20252a;
+    --products-muted: #687078;
+    --products-green: #315d4a;
+    --products-gold: #b98a4b;
+    --products-border: #dedbd4;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.products-container {
+    width: min(1240px, 90%);
+    margin: 0 auto;
+}
+
+.products-section {
+    padding: 100px 0;
+}
+
+.section-eyebrow {
+    margin: 0 0 15px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--products-green);
+}
+
+.light-eyebrow {
+    color: #c6975a;
+}
+
+.section-heading-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 55px;
+}
+
+.section-heading-row h2 {
+    margin: 0;
+    color: var(--products-text);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(38px, 4vw, 58px);
+    font-weight: 500;
+    line-height: 1.05;
+}
+
+.section-description {
+    max-width: 650px;
+    margin: 20px 0 0;
+    color: var(--products-muted);
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.outline-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    min-width: 210px;
+    padding: 17px 23px;
+    border: 1px solid #9b9b96;
+    color: var(--products-text);
+    background: transparent;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.outline-button span {
+    font-size: 18px;
+}
+
+.outline-button:hover {
+    background: var(--products-navy);
+    border-color: var(--products-navy);
+    color: white;
+}
+
+.light-button {
+    border-color: rgba(255, 255, 255, 0.35);
+    color: white;
+}
+
+.light-button:hover {
+    background: white;
+    color: var(--products-navy);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.products-hero {
+    position: relative;
+    min-height: 530px;
+    display: flex;
+    align-items: center;
+
+    background-image: url("../images/products-page/products-hero.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+.products-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(12, 21, 31, 0.95) 0%,
+            rgba(12, 21, 31, 0.82) 42%,
+            rgba(12, 21, 31, 0.48) 72%,
+            rgba(12, 21, 31, 0.30) 100%
+        );
+}
+
+.products-hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 90px 0;
+}
+
+.products-hero h1 {
+    max-width: 750px;
+    margin: 0;
+
+    color: white;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(55px, 7vw, 90px);
+    font-weight: 400;
+    line-height: 0.98;
+}
+
+.products-hero h1 span {
+    display: block;
+    color: #c99555;
+}
+
+.products-hero-text {
+    max-width: 680px;
+    margin: 30px 0 0;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.hero-line {
+    width: 55px;
+    height: 2px;
+    margin-top: 32px;
+    background: #c99555;
+}
+
+.hero-tagline {
+    margin: 16px 0 0;
+
+    color: rgba(255, 255, 255, 0.9);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   AGRO SECTION
+========================================================= */
+
+.agro-section {
+    background: var(--products-cream);
+}
+
+
+/* =========================================================
+   AGRO PRODUCT CARDS
+========================================================= */
+
+.agro-product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.agro-product-card {
+    overflow: hidden;
+
+    background: white;
+    border: 1px solid var(--products-border);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.agro-product-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(20, 30, 40, 0.10);
+}
+
+.product-image-box {
+    position: relative;
+    height: 245px;
+    overflow: hidden;
+    background: #eceae4;
+}
+
+.product-image-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.agro-product-card:hover .product-image-box img {
+    transform: scale(1.05);
+}
+
+.product-number {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+
+    color: white;
+
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: 700;
+
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+
+.product-card-content {
+    min-height: 155px;
+    padding: 22px 20px 25px;
+}
+
+.small-number {
+    margin: 0 0 10px;
+
+    color: var(--products-green);
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.product-card-content h3 {
+    margin: 0 0 13px;
+
+    color: var(--products-text);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    line-height: 1.15;
+}
+
+.product-card-content p:last-child {
+    margin: 0;
+
+    color: var(--products-muted);
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   MORE AGRO OPTIONS
+========================================================= */
+
+.more-agro-panel {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+
+    margin-top: 35px;
+
+    background: white;
+    border: 1px solid var(--products-border);
+}
+
+.more-agro-image {
+    min-height: 260px;
+    overflow: hidden;
+}
+
+.more-agro-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: cover;
+}
+
+.more-agro-content {
+    padding: 35px 40px;
+}
+
+.more-agro-content h3 {
+    margin: 0;
+
+    color: var(--products-text);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.more-agro-content > p:not(.section-eyebrow) {
+    max-width: 600px;
+    margin: 12px 0 25px;
+
+    color: var(--products-muted);
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.agro-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.agro-options span {
+    padding: 10px 13px;
+
+    background: #f2f3ef;
+    border: 1px solid #e2e4de;
+
+    color: #3f5148;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   RAW AGRO
+========================================================= */
+
+.raw-agro-section {
+    background: white;
+}
+
+.requirement-badge {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    min-width: 205px;
+    padding: 20px 25px;
+
+    border: 1px solid #c9a76f;
+    background: #f7f3eb;
+}
+
+.badge-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid #c9a76f;
+    border-radius: 50%;
+
+    color: #a5793e;
+}
+
+.requirement-badge strong,
+.requirement-badge small {
+    display: block;
+}
+
+.requirement-badge strong {
+    color: var(--products-text);
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.requirement-badge small {
+    margin-top: 4px;
+
+    color: var(--products-green);
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.raw-agro-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.raw-agro-card {
+    display: grid;
+    grid-template-columns: 48% 52%;
+
+    overflow: hidden;
+
+    background: var(--products-cream);
+    border: 1px solid var(--products-border);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.raw-agro-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 40px rgba(20, 30, 40, 0.09);
+}
+
+.raw-image-box {
+    min-height: 330px;
+    overflow: hidden;
+}
+
+.raw-image-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.raw-agro-card:hover .raw-image-box img {
+    transform: scale(1.05);
+}
+
+.raw-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+.raw-card-content h3 {
+    margin: 0 0 15px;
+
+    color: var(--products-text);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.raw-card-content p:not(.small-number) {
+    margin: 0;
+
+    color: var(--products-muted);
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.raw-card-content a {
+    display: inline-block;
+    margin-top: 25px;
+
+    color: var(--products-green);
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   AUTOMOBILE SECTION
+========================================================= */
+
+.automobile-section {
+    background:
+        linear-gradient(
+            180deg,
+            var(--products-navy) 0%,
+            var(--products-navy-dark) 100%
+        );
+}
+
+.automobile-heading h2 {
+    color: white;
+}
+
+.light-description {
+    color: rgba(255, 255, 255, 0.66);
+}
+
+
+/* =========================================================
+   AUTO CATEGORY GRID
+========================================================= */
+
+.auto-category-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 14px;
+}
+
+.auto-category-card {
+    overflow: hidden;
+
+    background: #f4f2ec;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.auto-category-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.auto-image-box {
+    height: 190px;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.auto-image-box img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.auto-category-card:hover .auto-image-box img {
+    transform: scale(1.06);
+}
+
+.auto-card-content {
+    min-height: 190px;
+    padding: 22px 18px;
+}
+
+.auto-card-content .small-number {
+    color: #956d38;
+}
+
+.auto-card-content h3 {
+    min-height: 45px;
+    margin: 0 0 12px;
+
+    color: var(--products-text);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 1.15;
+}
+
+.auto-card-content p:not(.small-number) {
+    min-height: 48px;
+    margin: 0;
+
+    color: #687078;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+.auto-card-content a {
+    display: inline-block;
+    margin-top: 18px;
+
+    color: var(--products-green);
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   SPARE PARTS OPTIONS
+========================================================= */
+
+.spare-parts-panel {
+    display: grid;
+    grid-template-columns: 38% 62%;
+
+    margin-top: 35px;
+
+    background: #f3f1eb;
+}
+
+.spare-parts-image {
+    min-height: 300px;
+    overflow: hidden;
+}
+
+.spare-parts-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    object-fit: cover;
+}
+
+.spare-parts-content {
+    padding: 38px 40px;
+}
+
+.spare-parts-content h3 {
+    margin: 0 0 25px;
+
+    color: var(--products-text);
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.spare-parts-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.spare-parts-list span {
+    padding: 9px 12px;
+
+    background: white;
+    border: 1px solid #dedbd4;
+
+    color: #46514d;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.products-cta {
+    position: relative;
+
+    min-height: 400px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20, 31, 43, 0.97),
+            rgba(20, 31, 43, 0.90)
+        ),
+        url("../images/products-page/products-hero.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.products-cta-inner {
+    position: relative;
+    z-index: 2;
+}
+
+.products-cta h2 {
+    margin: 0;
+
+    color: white;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(40px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 1.05;
+}
+
+.products-cta p:not(.section-eyebrow) {
+    max-width: 600px;
+    margin: 22px 0 28px;
+
+    color: rgba(255, 255, 255, 0.70);
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.cta-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+
+    padding: 15px 22px;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.primary-button {
+    background: #c39251;
+    color: white;
+}
+
+.primary-button:hover {
+    background: #a9793e;
+}
+
+.primary-button span {
+    font-size: 17px;
+}
+
+.secondary-button {
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: white;
+}
+
+.secondary-button:hover {
+    background: white;
+    color: var(--products-navy);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1150px) {
+
+    .agro-product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .auto-category-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .products-section {
+        padding: 75px 0;
+    }
+
+    .section-heading-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .products-hero {
+        min-height: 480px;
+    }
+
+    .products-hero h1 {
+        font-size: 58px;
+    }
+
+    .agro-product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .more-agro-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .more-agro-image {
+        min-height: 250px;
+    }
+
+    .raw-agro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .auto-category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .spare-parts-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .spare-parts-image {
+        min-height: 300px;
+    }
+
+}
+
+
+@media (max-width: 560px) {
+
+    .products-container {
+        width: min(92%, 1240px);
+    }
+
+    .products-section {
+        padding: 60px 0;
+    }
+
+    .products-hero {
+        min-height: 500px;
+    }
+
+    .products-hero-content {
+        padding: 70px 0;
+    }
+
+    .products-hero h1 {
+        font-size: 46px;
+    }
+
+    .products-hero-text {
+        font-size: 13px;
+    }
+
+    .agro-product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image-box {
+        height: 260px;
+    }
+
+    .raw-agro-card {
+        grid-template-columns: 1fr;
+    }
+
+    .raw-image-box {
+        min-height: 250px;
+    }
+
+    .auto-category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .auto-image-box {
+        height: 230px;
+    }
+
+    .spare-parts-content {
+        padding: 28px 22px;
+    }
+
+    .products-cta {
+        min-height: 440px;
+    }
+
+    .cta-buttons {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .primary-button,
+    .secondary-button {
+        width: 100%;
+    }
+
+}
