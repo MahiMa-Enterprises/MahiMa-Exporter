@@ -40,4 +40,11 @@ urlpatterns = [
         name="contact"
     ),
 
+    # Google Search Console verification
+    path(
+        "googlef24fe2e733aa6bfa.html",
+        views.google_verification,
+        name="google_verification"
+    ),
+
 ]

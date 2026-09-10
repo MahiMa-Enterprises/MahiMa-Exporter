@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.conf import settings
+from django.http import HttpResponse
 
 from brevo import Brevo
 
@@ -36,6 +37,17 @@ def send_brevo_email(subject, email_body, reply_to=None):
 
     return client.transactional_emails.send_transac_email(
         **send_kwargs
+    )
+
+
+# =========================================================
+# GOOGLE SEARCH CONSOLE VERIFICATION
+# =========================================================
+
+def google_verification(request):
+    return HttpResponse(
+        "google-site-verification: googlef24fe2e733aa6bfa.html",
+        content_type="text/plain"
     )
 
 
