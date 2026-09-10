@@ -10,14 +10,24 @@ sitemaps = {
 }
 
 
+def sitemap_view(request):
+    response = sitemap(
+        request,
+        sitemaps=sitemaps,
+    )
+
+    response.headers.pop("X-Robots-Tag", None)
+
+    return response
+
+
 urlpatterns = [
     path("admin/", admin.site.urls),
 
     path(
         "sitemap.xml",
-        sitemap,
-        {"sitemaps": sitemaps},
-        name="django.contrib.sitemaps.views.sitemap",
+        sitemap_view,
+        name="sitemap",
     ),
 
     path("", include("website.urls")),
