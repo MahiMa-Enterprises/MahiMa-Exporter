@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mahima-exporter.onrender.com/sitemap.xml
